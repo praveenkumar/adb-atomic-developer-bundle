@@ -1,0 +1,12 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  - apt-get install -y python-pykickstart
+  - apt-get install -y python-enchant
+script:
+  - "ksvalidator build_tools/kickstarts/centos-7-kubernetes-vagrant.ks"
+  - "python src/spellcheck.py ."
+notifications:
+ email: false
+
