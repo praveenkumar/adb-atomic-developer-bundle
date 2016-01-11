@@ -5,7 +5,7 @@ before_install:
   - apt-get install -y python-pykickstart
   - apt-get install -y python-enchant
 script:
-  - "ksvalidator build_tools/kickstarts/centos-7-kubernetes-vagrant.ks"
+  - "ksvalidator build_tools/kickstarts/centos-7-adb-vagrant.ks"
   - "python src/spellcheck.py ."
 notifications:
  email: false
