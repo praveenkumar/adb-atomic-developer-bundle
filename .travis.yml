@@ -2,8 +2,8 @@ language: python
 python:
   - "2.7"
 before_install:
-  - apt-get install -y python-pykickstart
-  - apt-get install -y python-enchant
+  - sudo apt-get install -y python-pykickstart
+  - sudo apt-get install -y python-enchant
 script:
   - "ksvalidator build_tools/kickstarts/centos-7-adb-vagrant.ks"
   - "python src/spellcheck.py ."
